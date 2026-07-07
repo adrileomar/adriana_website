@@ -186,7 +186,7 @@
 
   .nav-links{
     display: none;
-    gap: 26px;
+    gap: 18px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -237,7 +237,7 @@
   }
   .nav-mobile-panel a:last-child{ border-bottom: none; }
 
-  @media (min-width: 860px){
+  @media (min-width: 1020px){
     .nav-links{ display: flex; }
     .nav-toggle{ display: none; }
     .nav-mobile-panel{ display: none !important; }
@@ -767,14 +767,55 @@
     width: fit-content;
   }
 
-  /* ---------- Work with Adriana ---------- */
-  .work-grid{
+  /* ---------- Testimonials ---------- */
+  .testimonial-grid{
     display: grid;
-    gap: 40px;
+    gap: 24px;
     grid-template-columns: minmax(0,1fr);
   }
   @media (min-width: 780px){
-    .work-grid{ grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+    .testimonial-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  .testimonial-card{
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 28px 24px;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-quote{
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin-bottom: 18px;
+    flex-grow: 1;
+  }
+  .testimonial-attribution{
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-soft);
+  }
+  .testimonial-attribution strong{
+    display: block;
+    font-family: var(--font-sans);
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin-bottom: 2px;
+  }
+
+  /* ---------- Work with Adriana ---------- */
+  .work-grid{
+    display: grid;
+    gap: 32px;
+    grid-template-columns: minmax(0,1fr);
+  }
+  @media (min-width: 980px){
+    .work-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
   }
   .work-col{
     border: 1px solid var(--color-border);
@@ -803,6 +844,71 @@
     color: var(--color-beige-accent);
     font-weight: 500;
     margin-bottom: 18px;
+  }
+
+  /* ---------- Resources ---------- */
+  .resources-section{
+    background: var(--color-beige-light);
+  }
+  .resources-grid{
+    display: grid;
+    gap: 22px;
+    grid-template-columns: minmax(0,1fr);
+  }
+  @media (min-width: 780px){
+    .resources-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  .resource-card{
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 26px 24px;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+  }
+  .resource-price{
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-beige-accent);
+    margin-bottom: 10px;
+  }
+  .resource-card h3{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  .resource-card p{
+    color: var(--color-text-soft);
+    font-size: 0.92rem;
+    flex-grow: 1;
+    margin-bottom: 18px;
+  }
+  .resource-card.is-waitlist{
+    border-style: dashed;
+  }
+  .tools-row{
+    margin-top: 44px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+  }
+  .tools-row h3{
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .tools-row p{
+    color: var(--color-text-soft);
+    font-size: 0.88rem;
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+  .tools-row .disclosure{
+    font-size: 0.78rem;
+    color: var(--color-text-soft);
+    display: block;
+    margin-top: 6px;
   }
 
   /* ---------- AdrianaAsk ---------- */
@@ -1028,10 +1134,10 @@
     <ul class="nav-links">
       <li><a href="#path">Path</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#speaking-history">Speaking</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#articles">Research</a></li>
       <li><a href="#work">Work with Me</a></li>
+      <li><a href="#resources">Resources</a></li>
       <li><a href="#adrianaask">AdrianaAsk</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1040,10 +1146,10 @@
   <div class="nav-mobile-panel" id="navMobilePanel">
     <a href="#path">Path</a>
     <a href="#projects">Projects</a>
-    <a href="#speaking-history">Speaking</a>
     <a href="#expertise">Expertise</a>
     <a href="#articles">Research</a>
     <a href="#work">Work with Me</a>
+    <a href="#resources">Resources</a>
     <a href="#adrianaask">AdrianaAsk</a>
     <a href="#contact">Contact</a>
   </div>
@@ -1321,27 +1427,62 @@
     </div>
   </section>
 
+  <!-- ================= TESTIMONIALS / PROOF POINTS ================= -->
+  <!-- Swap these for real client quotes as they come in — see the attribution comment above each card -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Track Record</div>
+        <h2>Why Schools &amp; Organizers Book Adriana</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">Peer-reviewed research on teacher attractiveness across six countries, published in the <em>European Journal of Educational Research</em>.</p>
+          <div class="testimonial-attribution"><strong>Published Research</strong>Academic credibility, not just opinion</div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">Selected to present at EDULEARN26 in Palma and the International Academic Conference on Education, Teaching and Learning in Helsinki.</p>
+          <div class="testimonial-attribution"><strong>International Speaker</strong>Vetted by academic conference committees</div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-quote">Coached 70+ students in national and international debate, and led Baltic-region teacher training under Nordplus-funded partnerships with ministries and universities.</p>
+          <div class="testimonial-attribution"><strong>Classroom-Tested</strong>Practice, not just theory</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= WORK WITH ADRIANA ================= -->
   <section id="work">
     <div class="container">
       <div class="section-head reveal">
         <div class="section-eyebrow">Collaborate</div>
         <h2>Work with Adriana</h2>
-        <p>Available for speaking engagements and consulting projects with schools, education organizations and policymakers.</p>
+        <p>Available for speaking engagements, in-person workshops and advisory projects with schools, education organizations and policymakers.</p>
       </div>
       <div class="work-grid">
         <div class="work-col reveal">
-          <div class="work-label">Speaking</div>
-          <h3>Keynotes, Panels &amp; Workshops</h3>
+          <div class="work-label">Speaking &middot; From €300</div>
+          <h3>Keynotes &amp; Panels</h3>
           <p>Adriana speaks at conferences, panels and internal events, translating research on education, AI and leadership into practical guidance for educators and policymakers.</p>
           <ul>
             <li>AI in Education — From Hype to Responsible Implementation</li>
             <li>The Future Role of Teachers</li>
             <li>Education Policy and Teacher Shortages</li>
-            <li>Building AI Literacy in Schools</li>
             <li>Educational Leadership in Times of Technological Change</li>
           </ul>
           <a class="btn btn-primary" href="#contact">Invite to Speak</a>
+        </div>
+        <div class="work-col reveal">
+          <div class="work-label">Workshops &middot; From €600</div>
+          <h3>Half- &amp; Full-Day Training</h3>
+          <p>A fixed-scope, hands-on session for a single school or teacher team — leaves staff with a working AI-use policy or practical classroom toolkit, not just slides.</p>
+          <ul>
+            <li>Building AI Literacy in Schools (half-day)</li>
+            <li>AI-Assisted Lesson Planning &amp; Prototyping (full-day)</li>
+            <li>CLIL &amp; Digital Pedagogy Training</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Book a Workshop</a>
         </div>
         <div class="work-col reveal">
           <div class="work-label">Consulting</div>
@@ -1355,6 +1496,44 @@
           </ul>
           <a class="btn btn-primary" href="#contact">Request a Consultation</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESOURCES ================= -->
+  <section id="resources" class="resources-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">For Educators</div>
+        <h2>Resources</h2>
+        <p>Practical tools built from the same research and workshops above — for teachers and school leaders who want a head start without booking a full engagement.</p>
+      </div>
+      <div class="resources-grid">
+        <div class="resource-card reveal">
+          <div class="resource-price">€19</div>
+          <h3>School AI-Use Policy Template</h3>
+          <p>A ready-to-adapt policy framework covering student use, staff use, data privacy and assessment integrity — built from real school consulting engagements.</p>
+          <!-- Replace with a real Gumroad/Stripe product link -->
+          <a class="btn btn-secondary btn-block" href="#contact">Get the Template</a>
+        </div>
+        <div class="resource-card reveal">
+          <div class="resource-price">€29</div>
+          <h3>AI-Assisted Lesson Planning Toolkit</h3>
+          <p>The prompt library and workflow used in the "AI-Assisted Prototyping" workshop, adapted for solo teacher use — no coding required.</p>
+          <!-- Replace with a real Gumroad/Stripe product link -->
+          <a class="btn btn-secondary btn-block" href="#contact">Get the Toolkit</a>
+        </div>
+        <div class="resource-card is-waitlist reveal">
+          <div class="resource-price">Coming soon</div>
+          <h3>AI Literacy for Educators — Self-Paced Course</h3>
+          <p>A short, practical course distilling Adriana's workshop content into self-paced video lessons. Join the waitlist to get early access and founding-member pricing.</p>
+          <a class="btn btn-primary btn-block" href="#newsletter">Join the Waitlist</a>
+        </div>
+      </div>
+      <div class="tools-row reveal">
+        <h3>Tools &amp; Reading</h3>
+        <p>The AI and EdTech tools behind Adriana's own workshops and prototyping work — shared here for teachers who ask what's actually in the toolbox, not just what's hyped.</p>
+        <span class="disclosure">Some links on this page may be affiliate links. If you buy through one, Adriana may earn a small commission at no extra cost to you.</span>
       </div>
     </div>
   </section>
@@ -1394,7 +1573,7 @@
   </section>
 
   <!-- ================= NEWSLETTER ================= -->
-  <section class="newsletter">
+  <section class="newsletter" id="newsletter">
     <div class="container">
       <h2 class="reveal">Insights on AI, education policy and the future of learning.</h2>
       <p class="reveal">Occasional, no-fluff updates. Unsubscribe anytime.</p>
@@ -1413,14 +1592,17 @@
       <div class="section-head reveal">
         <div class="section-eyebrow">Get in Touch</div>
         <h2>Contact</h2>
-        <p>For speaking, consulting, research collaboration or media inquiries.</p>
+        <p>For speaking, workshops, consulting, resource licensing, sponsorship or media inquiries.</p>
       </div>
       <div class="contact-grid">
         <div class="reveal">
           <ul class="inquiry-list">
-            <li><strong>Speaking</strong> — conferences, panels, workshops</li>
+            <li><strong>Speaking</strong> — conferences, panels, keynotes</li>
+            <li><strong>Workshops</strong> — booked training for a school or teacher team</li>
             <li><strong>Consulting</strong> — schools, education organizations, policymakers</li>
+            <li><strong>Resources</strong> — bulk licensing of templates/toolkits for a school or district</li>
             <li><strong>Research collaboration</strong> — studies, papers, joint projects</li>
+            <li><strong>Sponsorship &amp; partnerships</strong> — newsletter, AdrianaAsk, co-marketing</li>
             <li><strong>Media</strong> — interviews, commentary, expert quotes</li>
           </ul>
           <!-- Replace with real contact email -->
@@ -1457,8 +1639,11 @@
             <label for="inquiry-type">Inquiry Type</label>
             <select id="inquiry-type" name="inquiry_type">
               <option value="speaking">Speaking</option>
+              <option value="workshop">Workshop booking</option>
               <option value="consulting">Consulting</option>
+              <option value="resources">Resource licensing</option>
               <option value="research">Research collaboration</option>
+              <option value="sponsorship">Sponsorship / partnership</option>
               <option value="media">Media</option>
               <option value="other">Other</option>
             </select>
