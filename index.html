@@ -248,16 +248,17 @@
   .hero .container{
     display: grid;
     grid-template-columns: minmax(0,1fr);
-    gap: 40px;
-    align-items: center;
+    gap: 28px;
+    align-items: start;
   }
   .hero-portrait{
     order: -1;
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
+    width: 200px;
+    max-width: 200px;
+    margin: 0;
     aspect-ratio: 4 / 5;
     background: var(--color-beige-light);
+    border: 1px solid var(--color-border);
     border-radius: 6px;
     overflow: hidden;
   }
@@ -292,11 +293,12 @@
 
   @media (min-width: 860px){
     .hero .container{
-      grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr);
+      grid-template-columns: 260px minmax(0,1fr);
+      gap: 40px;
     }
     .hero-portrait{
-      order: 2;
-      max-width: 100%;
+      width: 260px;
+      max-width: 260px;
     }
   }
 
