@@ -353,18 +353,138 @@
     color: var(--color-text-soft);
   }
 
-  /* ---------- About ---------- */
-  .about-content{
+  /* ---------- Path (timeline) ---------- */
+  .timeline{
     max-width: 700px;
     margin: 0 auto;
   }
-  .about-content p{
-    color: var(--color-text-soft);
-    font-size: 1.02rem;
+  .timeline-item{
+    position: relative;
+    padding-left: 28px;
+    padding-bottom: 40px;
+    border-left: 1px solid var(--color-border);
   }
-  .about-content em{
+  .timeline-item:last-child{
+    padding-bottom: 0;
+    border-left-color: transparent;
+  }
+  .timeline-item::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--color-beige-accent);
+  }
+  .timeline-date{
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-beige-accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .timeline-role{
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .timeline-desc{
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  /* ---------- Projects ---------- */
+  .projects-section{
+    background: var(--color-beige-light);
+  }
+  .project-list{
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .project-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .project-row:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .project-row:first-child{
+    padding-top: 0;
+  }
+  .project-tag{
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-beige-accent);
+    font-weight: 600;
+  }
+  .project-row h3{
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  .project-row p{
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .project-row em{
     font-style: italic;
     color: var(--color-text);
+  }
+  @media (min-width: 700px){
+    .project-row{
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+    }
+  }
+
+  /* ---------- Speaking History ---------- */
+  .speaking-list{
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .speaking-row{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .speaking-row:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .speaking-row:first-child{
+    padding-top: 0;
+  }
+  .speaking-tag{
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-beige-accent);
+    font-weight: 600;
+  }
+  .speaking-row h3{
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  .speaking-row p{
+    color: var(--color-text-soft);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  @media (min-width: 700px){
+    .speaking-row{
+      grid-template-columns: 200px 1fr;
+      gap: 24px;
+    }
   }
 
   /* ---------- Expertise ---------- */
@@ -709,7 +829,9 @@
   <nav class="nav">
     <a class="nav-logo" href="#top">Adriana Martinkevica</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#path">Path</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#speaking-history">Speaking</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#articles">Articles</a></li>
       <li><a href="#work">Work with Me</a></li>
@@ -719,7 +841,9 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobilePanel">Menu</button>
   </nav>
   <div class="nav-mobile-panel" id="navMobilePanel">
-    <a href="#about">About</a>
+    <a href="#path">Path</a>
+    <a href="#projects">Projects</a>
+    <a href="#speaking-history">Speaking</a>
     <a href="#expertise">Expertise</a>
     <a href="#articles">Articles</a>
     <a href="#work">Work with Me</a>
@@ -761,18 +885,93 @@
     </div>
   </div>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about">
+  <!-- ================= PATH ================= -->
+  <section id="path">
     <div class="container">
       <div class="section-head reveal">
-        <div class="section-eyebrow">Background</div>
-        <h2>About Adriana</h2>
+        <div class="section-eyebrow">Career</div>
+        <h2>Path</h2>
       </div>
-      <div class="about-content reveal">
-        <p>Adriana is a PhD candidate in Education Management at the University of Latvia, where her doctoral research examines the relationship between education policy and teacher shortages in Latvia. The work draws on comparative analysis across countries including Finland, Estonia, Portugal and Singapore, grounded in OECD TALIS and PISA evidence and national policy frameworks such as NAP2027 and Latvia's Education Development Guidelines.</p>
-        <p>Her research sits alongside an active teaching practice. Since 2021, she has taught English and communication at Riga Zolitude Grammar School, coaching national and international debate teams and coordinating the school's Erasmus+ partnerships. Before that, she spent several years as an education project coordinator and trainer at the CLIL Learning Center, leading teacher professional development in CLIL methodology and digital pedagogy across Baltic partner schools, and working with ministries and universities on Nordplus-supported initiatives.</p>
-        <p>Her research has been published in the <em>European Journal of Educational Research</em> and presented at international conferences including EDULEARN26 in Palma and an academic conference in Helsinki. She has taken part in OECD TALIS and PISA results conferences and the WISE World Innovation Summit for Education, and has completed dedicated training in AI literacy and responsible classroom use of AI — work that now feeds directly into her focus on how artificial intelligence is reshaping teaching and education policy.</p>
-        <p>It is this combination — active classroom teaching, doctoral research and international policy engagement — that shapes how she approaches AI in education: grounded in evidence, and tested against the realities of an actual classroom.</p>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2017 — 2023</div>
+          <h3 class="timeline-role">Education Project Coordinator &amp; Trainer, CLIL Learning Center</h3>
+          <p class="timeline-desc">Led teacher professional development in CLIL methodology and digital pedagogy across Baltic partner schools; coordinated Nordplus-supported initiatives with ministries and universities.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2021 — Present</div>
+          <h3 class="timeline-role">Educator &amp; Debate Coach, Riga Municipality</h3>
+          <p class="timeline-desc">Teaches English and communication, coaches national and international debate teams of 70+ students, and coordinates the school's Erasmus+ partnerships.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2023 — Present</div>
+          <h3 class="timeline-role">PhD Education Leadership, University of Latvia</h3>
+          <p class="timeline-desc">Doctoral research on the relationship between education policy and teacher shortages in Latvia, drawing on comparative analysis across six countries.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2025 — Present</div>
+          <h3 class="timeline-role">Educational Researcher, University of Latvia</h3>
+          <p class="timeline-desc">Researches teacher policy using OECD TALIS/PISA evidence and national policy frameworks, presenting findings at international academic and policy conferences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Selected Work</div>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-list">
+        <div class="project-row reveal">
+          <div class="project-tag">Research Framework</div>
+          <div>
+            <h3>Teacher Attractiveness Index</h3>
+            <p>A comparative framework analyzing entry conditions, retention systems, workload and policy stability across six countries — the basis for a peer-reviewed journal publication in the <em>European Journal of Educational Research</em>.</p>
+          </div>
+        </div>
+        <div class="project-row reveal">
+          <div class="project-tag">Nordplus Initiative</div>
+          <div>
+            <h3>Digital Creative Education &amp; DABA Hub</h3>
+            <p>Baltic-region teacher training initiatives in digital pedagogy and creative digital tools, coordinated in partnership with ministries, universities and partner schools.</p>
+          </div>
+        </div>
+        <div class="project-row reveal">
+          <div class="project-tag">Applied AI Practice</div>
+          <div>
+            <h3>AI-Assisted Prototyping &amp; Vibe Coding</h3>
+            <p>Hands-on development of education-oriented tools and prototypes using prompt-driven, no-code and low-code workflows — turning AI literacy into practical, classroom-ready concepts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SPEAKING HISTORY ================= -->
+  <section id="speaking-history">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Conferences &amp; Talks</div>
+        <h2>Speaking Engagements</h2>
+      </div>
+      <div class="speaking-list">
+        <div class="speaking-row reveal">
+          <div class="speaking-tag">Palma, Spain — 2026</div>
+          <div>
+            <h3>EDULEARN26 — International Conference on Education and New Learning Technologies</h3>
+            <p>Presented "Working Conditions and Teacher Job Satisfaction in Latvia," a TALIS-based analysis of teacher well-being and workforce sustainability.</p>
+          </div>
+        </div>
+        <div class="speaking-row reveal">
+          <div class="speaking-tag">Helsinki, Finland — 2025</div>
+          <div>
+            <h3>International Academic Conference on Education, Teaching and Learning</h3>
+            <p>Oral presentation on the role of education policy in shaping the teaching profession — research later developed into a peer-reviewed journal publication.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
