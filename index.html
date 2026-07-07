@@ -5,25 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adriana Martinkevica — Education Research, AI &amp; Policy Made Practical</title>
 <meta name="description" content="Adriana Martinkevica is an education researcher, doctoral researcher in educational leadership, and AI in education practitioner helping schools, educators and policymakers turn research into practical, future-ready education.">
+<link rel="canonical" href="https://www.adrianamartinkevica.com/">
+<meta name="theme-color" content="#1d2b4f">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Adriana Martinkevica — Education Research, AI &amp; Policy Made Practical">
 <meta property="og:description" content="Education researcher and practitioner helping schools, educators and policymakers turn AI and research evidence into better, future-ready education.">
-<meta property="og:image" content="assets/adriana-portrait.jpg">
-<!-- Replace with real canonical URL before deploying -->
+<meta property="og:image" content="https://www.adrianamartinkevica.com/assets/adriana-portrait.jpg">
 <meta property="og:url" content="https://www.adrianamartinkevica.com/">
+<meta property="og:locale" content="en_US">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Adriana Martinkevica — Education Research, AI &amp; Policy Made Practical">
 <meta name="twitter:description" content="Education researcher and practitioner helping schools, educators and policymakers turn AI and research evidence into better, future-ready education.">
-<meta name="twitter:image" content="assets/adriana-portrait.jpg">
+<meta name="twitter:image" content="https://www.adrianamartinkevica.com/assets/adriana-portrait.jpg">
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- LCP image: preloaded so the browser fetches it immediately instead of discovering it after CSS/JS parses -->
+<link rel="preload" as="image" href="assets/adriana-portrait.jpg" fetchpriority="high">
+
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/home.css">
 
 <script type="application/ld+json">
 {
@@ -34,10 +42,16 @@
   "description": "Education researcher and practitioner working on AI in education, education policy, educational leadership and the future of teaching.",
   "url": "https://www.adrianamartinkevica.com/",
   "image": "https://www.adrianamartinkevica.com/assets/adriana-portrait.jpg",
+  "worksFor": [
+    { "@type": "CollegeOrUniversity", "name": "University of Latvia" }
+  ],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Latvia" },
   "sameAs": [
     "https://www.linkedin.com/in/REPLACE-WITH-LINKEDIN-HANDLE",
     "https://www.youtube.com/@AdrianaAsk",
-    "https://www.instagram.com/REPLACE-WITH-INSTAGRAM-HANDLE"
+    "https://www.instagram.com/REPLACE-WITH-INSTAGRAM-HANDLE",
+    "https://orcid.org/REPLACE-WITH-ORCID-ID",
+    "https://scholar.google.com/REPLACE-WITH-SCHOLAR-PROFILE-ID"
   ],
   "knowsAbout": [
     "Artificial Intelligence in Education",
@@ -54,1066 +68,50 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Adriana Martinkevica",
-  "url": "https://www.adrianamartinkevica.com/"
+  "url": "https://www.adrianamartinkevica.com/",
+  "inLanguage": "en"
 }
 </script>
-
-<style>
-  :root{
-    --color-bg: #fafaf7;
-    --color-text: #1d2b4f;
-    --color-text-soft: #5b6478;
-    --color-beige-light: #f1eee4;
-    --color-beige-accent: #8a6b2e;
-    --color-border: rgba(29,43,79,0.15);
-    --color-highlighter: #f4d93e;
-    --color-redpen: #c1443b;
-    --font-serif: "Instrument Serif", Georgia, serif;
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
-    --max-width: 1140px;
-  }
-
-  *, *::before, *::after{ box-sizing: border-box; }
-
-  html{
-    scroll-behavior: smooth;
-  }
-
-  body{
-    margin: 0;
-    font-family: var(--font-sans);
-    color: var(--color-text);
-    background: var(--color-bg);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  img{ max-width: 100%; display: block; }
-
-  h1, h2, h3{
-    font-family: var(--font-serif);
-    font-weight: 400;
-    line-height: 1.08;
-    margin: 0 0 0.5em;
-    letter-spacing: -0.01em;
-  }
-
-  p{ margin: 0 0 1em; }
-
-  /* Highlighter mark — the one signature accent, used once in the hero */
-  mark.hl{
-    display: inline-block;
-    background: var(--color-highlighter);
-    color: var(--color-text);
-    padding: 0.02em 0.2em;
-    border-radius: 2px;
-    white-space: nowrap;
-    transform: rotate(-0.8deg) scale(0.92);
-    opacity: 0;
-    animation: hl-pop 0.5s cubic-bezier(.25,.8,.4,1) 0.5s forwards;
-  }
-  @media (prefers-reduced-motion: reduce){
-    mark.hl{ opacity: 1; transform: rotate(-0.8deg) scale(1); animation: none; }
-  }
-  @keyframes hl-pop{
-    to{ opacity: 1; transform: rotate(-0.8deg) scale(1); }
-  }
-
-  /* Red-pen squiggle — link hover treatment used across text links */
-  .squiggle{
-    text-decoration: none;
-    color: var(--color-text);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 6' width='20' height='6'%3E%3Cpath d='M0 3.5 Q 2.5 0.5 5 3.5 T 10 3.5 T 15 3.5 T 20 3.5' fill='none' stroke='%23C1443B' stroke-width='1.3' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: repeat-x;
-    background-position: 0 100%;
-    background-size: 20px 6px;
-    padding-bottom: 4px;
-    transition: color 0.15s ease;
-  }
-  .squiggle:hover{ color: var(--color-redpen); }
-
-  :focus-visible{
-    outline: 2px solid var(--color-redpen);
-    outline-offset: 2px;
-  }
-
-  a{ color: inherit; }
-
-  .container{
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .skip-link{
-    position: absolute;
-    left: -999px;
-    top: 0;
-    background: var(--color-text);
-    color: #fff;
-    padding: 10px 16px;
-    z-index: 200;
-  }
-  .skip-link:focus{ left: 12px; top: 12px; }
-
-  /* ---------- Nav ---------- */
-  .site-header{
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(250,250,247,0.92);
-    backdrop-filter: saturate(180%) blur(8px);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    max-width: var(--max-width);
-    margin: 0 auto;
-  }
-
-  .nav-logo{
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.45rem;
-    text-decoration: none;
-    color: var(--color-text);
-  }
-
-  .nav-links{
-    display: none;
-    gap: 18px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links a{
-    font-family: var(--font-mono);
-    text-decoration: none;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--color-text-soft);
-    transition: color 0.2s ease;
-  }
-  .nav-links a:hover{ color: var(--color-redpen); }
-
-  .nav-toggle{
-    display: inline-flex;
-    font-family: var(--font-mono);
-    background: none;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    padding: 8px 10px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--color-text);
-  }
-
-  .nav-mobile-panel{
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    padding: 8px 24px 20px;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .nav-mobile-panel.is-open{ display: flex; }
-  .nav-mobile-panel a{
-    font-family: var(--font-mono);
-    text-decoration: none;
-    color: var(--color-text-soft);
-    padding: 10px 0;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .nav-mobile-panel a:last-child{ border-bottom: none; }
-
-  @media (min-width: 1020px){
-    .nav-links{ display: flex; }
-    .nav-toggle{ display: none; }
-    .nav-mobile-panel{ display: none !important; }
-  }
-
-  /* ---------- Buttons ---------- */
-  .btn{
-    display: inline-block;
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 13px 26px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-  .btn-primary{
-    background: var(--color-text);
-    color: var(--color-bg);
-    border-color: var(--color-text);
-  }
-  .btn-primary:hover{
-    background: var(--color-redpen);
-    border-color: var(--color-redpen);
-  }
-  .btn-secondary{
-    background: transparent;
-    color: var(--color-text);
-    border-color: var(--color-text);
-  }
-  .btn-secondary:hover{
-    background: var(--color-text);
-    color: var(--color-bg);
-  }
-  .btn-block{ display: block; width: 100%; text-align: center; }
-
-  /* ---------- Badges & Icon Tiles ---------- */
-  .badge{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 5px 11px;
-    border-radius: 3px;
-    background: var(--color-beige-light);
-    border: 1px solid var(--color-border);
-    color: var(--color-text);
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .badge svg{
-    width: 13px;
-    height: 13px;
-    flex-shrink: 0;
-    stroke: var(--color-beige-accent);
-    fill: none;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .icon-tile{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
-    background: var(--color-beige-light);
-    border: 1px solid var(--color-border);
-    flex-shrink: 0;
-  }
-  .projects-section .icon-tile{
-    background: var(--color-bg);
-  }
-  .icon-tile svg{
-    width: 22px;
-    height: 22px;
-    stroke: var(--color-beige-accent);
-    fill: none;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .icon-tile-sm{
-    width: 32px;
-    height: 32px;
-    border-radius: 5px;
-  }
-  .icon-tile-sm svg{
-    width: 16px;
-    height: 16px;
-  }
-
-  /* ---------- Reveal animation ---------- */
-  .reveal{
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.is-visible{
-    opacity: 1;
-    transform: translateY(0);
-  }
-  @media (prefers-reduced-motion: reduce){
-    .reveal{ opacity: 1; transform: none; transition: none; }
-    html{ scroll-behavior: auto; }
-  }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    padding: 56px 0 64px;
-  }
-  .hero .container{
-    display: grid;
-    grid-template-columns: minmax(0,1fr);
-    gap: 28px;
-    align-items: start;
-  }
-  .hero-portrait{
-    order: -1;
-    width: 200px;
-    max-width: 200px;
-    margin: 0;
-    aspect-ratio: 4 / 5;
-    background: var(--color-beige-light);
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .hero-portrait img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .hero-eyebrow{
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.78rem;
-    color: var(--color-beige-accent);
-    font-weight: 500;
-    margin-bottom: 16px;
-  }
-  .hero h1{
-    font-size: clamp(2rem, 5vw, 3.1rem);
-    margin-bottom: 20px;
-  }
-  .hero-sub{
-    font-size: 1.1rem;
-    color: var(--color-text-soft);
-    max-width: 46ch;
-    margin-bottom: 30px;
-  }
-  .hero-ctas{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  @media (min-width: 860px){
-    .hero .container{
-      grid-template-columns: 260px minmax(0,1fr);
-      gap: 40px;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Adriana Martinkevica do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adriana Martinkevica is an education researcher and PhD candidate in Educational Leadership at the University of Latvia, researching teacher shortages and education policy. She also works as a practitioner on AI in education, speaking at conferences, running workshops for schools, and advising education organizations and policymakers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book Adriana Martinkevica to speak at a conference or event?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the contact form on this site and select 'Speaking' as the inquiry type, or email hello@adrianamartinkevica.com directly with your event details, dates and audience size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Adriana Martinkevica run workshops for schools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Adriana runs half-day and full-day in-person workshops for schools and teacher teams on AI literacy, AI-assisted lesson planning, and CLIL/digital pedagogy training, starting from €600 per session."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Teacher Attractiveness Index?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Teacher Attractiveness Index is a comparative research framework developed by Adriana Martinkevica that compares entry conditions, retention systems, workload and policy stability across six countries. It forms the basis of a peer-reviewed publication in the European Journal of Educational Research."
+      }
     }
-    .hero-portrait{
-      width: 260px;
-      max-width: 260px;
-    }
-  }
-
-  /* ---------- Credibility strip ---------- */
-  .credibility{
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
-    padding: 24px 0;
-  }
-
-  /* ---------- Highlights ---------- */
-  .highlights{
-    padding: 40px 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .highlights-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .highlight-tile{
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .highlight-stat{
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  .highlight-label{
-    font-size: 0.85rem;
-    color: var(--color-text-soft);
-    margin-top: 2px;
-  }
-  @media (min-width: 640px){
-    .highlights-grid{ grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 980px){
-    .highlights-grid{ grid-template-columns: repeat(4, 1fr); }
-  }
-  .credibility ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* ---------- Section shell ---------- */
-  section{ padding: 80px 0; }
-  .section-head{
-    max-width: 62ch;
-    margin: 0 auto 44px;
-    text-align: center;
-  }
-  .section-eyebrow{
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--color-beige-accent);
-    margin-bottom: 10px;
-  }
-  .section-head h2{
-    font-size: clamp(1.7rem, 3.2vw, 2.3rem);
-  }
-  .section-head p{
-    color: var(--color-text-soft);
-  }
-
-  /* ---------- Path (timeline) ---------- */
-  .timeline{
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .timeline-item{
-    position: relative;
-    padding-left: 44px;
-    padding-bottom: 40px;
-    border-left: 1px dashed var(--color-border);
-  }
-  .timeline-item:last-child{
-    padding-bottom: 0;
-    border-left-color: transparent;
-  }
-  .timeline-icon{
-    position: absolute;
-    left: -17px;
-    top: -2px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--color-beige-light);
-    border: 1px solid var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .timeline-icon svg{
-    width: 16px;
-    height: 16px;
-    stroke: var(--color-beige-accent);
-    fill: none;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-  .timeline-date{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-beige-accent);
-    font-weight: 500;
-    margin-bottom: 8px;
-  }
-  .timeline-role{
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-  .timeline-desc{
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-    margin-bottom: 0;
-  }
-
-  /* ---------- Projects ---------- */
-  .projects-section{
-    background: var(--color-beige-light);
-  }
-  .project-list{
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .project-row{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .project-row:last-child{
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .project-row:first-child{
-    padding-top: 0;
-  }
-  .project-icon-tag{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-  .project-tag{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-beige-accent);
-    font-weight: 500;
-  }
-  .project-bullets{
-    margin: 0;
-    padding-left: 18px;
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-  }
-  .project-bullets li{
-    margin-bottom: 6px;
-  }
-  .project-bullets li:last-child{
-    margin-bottom: 0;
-  }
-  @media (min-width: 700px){
-    .project-icon-tag{ margin-bottom: 0; }
-  }
-  .project-row h3{
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-  }
-  .project-row p{
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-    margin-bottom: 0;
-  }
-  .project-row em{
-    font-style: italic;
-    color: var(--color-text);
-  }
-  @media (min-width: 700px){
-    .project-row{
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-    }
-  }
-
-  /* ---------- Speaking History ---------- */
-  .speaking-list{
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .speaking-row{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding: 28px 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .speaking-row:last-child{
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-  .speaking-row:first-child{
-    padding-top: 0;
-  }
-  .speaking-icon-tag{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-  .speaking-tag{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-beige-accent);
-    font-weight: 500;
-  }
-  @media (min-width: 700px){
-    .speaking-icon-tag{ margin-bottom: 0; }
-  }
-  .speaking-row h3{
-    font-size: 1.15rem;
-    margin-bottom: 8px;
-  }
-  .speaking-row p{
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-    margin-bottom: 0;
-  }
-  @media (min-width: 700px){
-    .speaking-row{
-      grid-template-columns: 200px 1fr;
-      gap: 24px;
-    }
-  }
-
-  /* ---------- Expertise ---------- */
-  .expertise-grid{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 640px){
-    .expertise-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-  }
-  @media (min-width: 960px){
-    .expertise-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .expertise-card{
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 28px 24px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-  }
-  .expertise-card .icon-tile{
-    margin-bottom: 16px;
-  }
-  .expertise-card:hover{
-    border-color: var(--color-redpen);
-    transform: translateY(-3px);
-  }
-  .expertise-card h3{
-    font-size: 1.15rem;
-    margin-bottom: 10px;
-  }
-  .expertise-card p{
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-    margin-bottom: 0;
-  }
-
-  /* ---------- Articles ---------- */
-  .articles-grid{
-    display: grid;
-    gap: 22px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 780px){
-    .articles-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .article-card{
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 26px 24px;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: var(--color-text);
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-  }
-  a.article-card:hover{
-    border-color: var(--color-redpen);
-    box-shadow: 0 6px 24px rgba(29,43,79,0.08);
-  }
-  .article-meta-row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-  .reading-time{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--color-text-soft);
-  }
-  .article-card h3{
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-  }
-  .article-card p{
-    color: var(--color-text-soft);
-    font-size: 0.95rem;
-    flex-grow: 1;
-  }
-  .article-cta{
-    margin-top: 16px;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-  .article-card.is-placeholder{
-    background: var(--color-beige-light);
-    border-style: dashed;
-  }
-  .badge-soon{
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    padding: 3px 10px;
-    border-radius: 3px;
-    margin-top: 16px;
-    color: var(--color-text-soft);
-    width: fit-content;
-  }
-
-  /* ---------- Testimonials ---------- */
-  .testimonial-grid{
-    display: grid;
-    gap: 24px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 780px){
-    .testimonial-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .testimonial-card{
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 28px 24px;
-    background: var(--color-bg);
-    display: flex;
-    flex-direction: column;
-  }
-  .testimonial-quote{
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
-    line-height: 1.35;
-    margin-bottom: 18px;
-    flex-grow: 1;
-  }
-  .testimonial-attribution{
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    color: var(--color-text-soft);
-  }
-  .testimonial-attribution strong{
-    display: block;
-    font-family: var(--font-sans);
-    text-transform: none;
-    letter-spacing: normal;
-    font-size: 0.95rem;
-    color: var(--color-text);
-    margin-bottom: 2px;
-  }
-
-  /* ---------- Work with Adriana ---------- */
-  .work-grid{
-    display: grid;
-    gap: 32px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 980px){
-    .work-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .work-col{
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 34px 30px;
-  }
-  .work-col h3{
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-  .work-col > p{
-    color: var(--color-text-soft);
-    margin-bottom: 20px;
-  }
-  .work-col ul{
-    margin: 0 0 26px;
-    padding-left: 20px;
-    color: var(--color-text-soft);
-  }
-  .work-col li{ margin-bottom: 8px; }
-  .work-label{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-beige-accent);
-    font-weight: 500;
-    margin-bottom: 18px;
-  }
-
-  /* ---------- Resources ---------- */
-  .resources-section{
-    background: var(--color-beige-light);
-  }
-  .resources-grid{
-    display: grid;
-    gap: 22px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 780px){
-    .resources-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .resource-card{
-    border: 1px solid var(--color-border);
-    border-radius: 6px;
-    padding: 26px 24px;
-    background: var(--color-bg);
-    display: flex;
-    flex-direction: column;
-  }
-  .resource-price{
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--color-beige-accent);
-    margin-bottom: 10px;
-  }
-  .resource-card h3{
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-  .resource-card p{
-    color: var(--color-text-soft);
-    font-size: 0.92rem;
-    flex-grow: 1;
-    margin-bottom: 18px;
-  }
-  .resource-card.is-waitlist{
-    border-style: dashed;
-  }
-  .tools-row{
-    margin-top: 44px;
-    padding-top: 32px;
-    border-top: 1px solid var(--color-border);
-    text-align: center;
-  }
-  .tools-row h3{
-    font-size: 1rem;
-    font-family: var(--font-sans);
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .tools-row p{
-    color: var(--color-text-soft);
-    font-size: 0.88rem;
-    max-width: 52ch;
-    margin: 0 auto;
-  }
-  .tools-row .disclosure{
-    font-size: 0.78rem;
-    color: var(--color-text-soft);
-    display: block;
-    margin-top: 6px;
-  }
-
-  /* ---------- AdrianaAsk ---------- */
-  .adrianaask{
-    background: var(--color-beige-light);
-  }
-  .video-grid{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: minmax(0,1fr);
-    margin: 36px 0 36px;
-  }
-  @media (min-width: 780px){
-    .video-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-  }
-  .video-card{
-    text-decoration: none;
-    color: var(--color-text);
-  }
-  .video-thumb{
-    aspect-ratio: 16 / 9;
-    background: var(--color-beige-light);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 12px;
-    border: 1px solid var(--color-border);
-  }
-  .video-thumb img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .video-thumb::after{
-    content: "▶";
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    color: var(--color-bg);
-    background: rgba(29,43,79,0.4);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  .video-card:hover .video-thumb::after{ opacity: 1; }
-  .video-card h3{
-    font-size: 1.02rem;
-    margin-bottom: 0;
-  }
-  .adrianaask-actions{ text-align: center; }
-
-  /* ---------- Newsletter ---------- */
-  .newsletter{
-    text-align: center;
-  }
-  .newsletter h2{
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
-    max-width: 30ch;
-    margin: 0 auto 14px;
-  }
-  .newsletter p{
-    color: var(--color-text-soft);
-    max-width: 44ch;
-    margin: 0 auto 28px;
-  }
-  .newsletter-form{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-  @media (min-width: 540px){
-    .newsletter-form{ flex-direction: row; }
-  }
-  .newsletter-form input[type="email"]{
-    flex: 1;
-    padding: 13px 16px;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-  }
-  .newsletter-form input[type="email"]:focus{
-    outline: 2px solid var(--color-redpen);
-    outline-offset: 1px;
-  }
-
-  /* ---------- Contact ---------- */
-  .contact-grid{
-    display: grid;
-    gap: 44px;
-    grid-template-columns: minmax(0,1fr);
-  }
-  @media (min-width: 860px){
-    .contact-grid{ grid-template-columns: minmax(0,0.85fr) minmax(0,1.15fr); }
-  }
-  .inquiry-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .inquiry-list li{
-    padding: 14px 0;
-    border-bottom: 1px solid var(--color-border);
-    color: var(--color-text-soft);
-  }
-  .inquiry-list li strong{ color: var(--color-text); }
-
-  .contact-email{
-    display: inline-block;
-    margin-top: 22px;
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-color: var(--color-redpen);
-    text-underline-offset: 4px;
-    transition: color 0.15s ease;
-  }
-  .contact-email:hover{ color: var(--color-redpen); }
-
-  .social-row{
-    display: flex;
-    gap: 16px;
-    margin-top: 24px;
-  }
-  .social-row a{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border: 1px solid var(--color-border);
-    border-radius: 50%;
-    transition: border-color 0.2s ease, background 0.2s ease;
-  }
-  .social-row a:hover{
-    border-color: var(--color-redpen);
-    background: var(--color-beige-light);
-  }
-  .social-row svg{ width: 18px; height: 18px; fill: var(--color-text); }
-
-  .contact-form{
-    display: grid;
-    gap: 18px;
-  }
-  .form-row{
-    display: grid;
-    gap: 18px;
-  }
-  @media (min-width: 560px){
-    .form-row.two-col{ grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
-  }
-  .field label{
-    display: block;
-    font-size: 0.85rem;
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-  .field input,
-  .field select,
-  .field textarea{
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    background: var(--color-bg);
-    color: var(--color-text);
-  }
-  .field input:focus,
-  .field select:focus,
-  .field textarea:focus{
-    outline: 2px solid var(--color-redpen);
-    outline-offset: 1px;
-  }
-  .field textarea{ resize: vertical; min-height: 130px; }
-
-  /* ---------- Footer ---------- */
-  .site-footer{
-    border-top: 1px solid var(--color-border);
-    padding: 32px 0;
-  }
-  .site-footer .container{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    text-align: center;
-  }
-  .site-footer p{
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--color-text-soft);
-  }
-  @media (min-width: 640px){
-    .site-footer .container{
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-    }
-  }
-</style>
+  ]
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9TY0YDBLH"></script>
 <script>
@@ -1165,25 +163,29 @@
         <h1>Education Research, AI and Policy —<br><mark class="hl">Made Practical</mark></h1>
         <p class="hero-sub">Adriana Martinkevica is an education researcher and practitioner helping schools, educators and policymakers turn AI and research evidence into better, future-ready education.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact">Invite Adriana to Speak</a>
+          <a class="btn btn-primary" href="#work">Work with Adriana</a>
           <a class="btn btn-secondary" href="#articles">Read the Research</a>
         </div>
       </div>
       <div class="hero-portrait">
-        <img src="assets/adriana-portrait.jpg" alt="Portrait of Adriana Martinkevica, education researcher">
+        <picture>
+          <source srcset="assets/adriana-portrait.webp" type="image/webp">
+          <img src="assets/adriana-portrait.jpg" alt="Portrait of Adriana Martinkevica, education researcher" width="600" height="750" fetchpriority="high" loading="eager">
+        </picture>
       </div>
     </div>
   </section>
 
   <!-- ================= CREDIBILITY STRIP ================= -->
+  <!-- Trimmed to the 3 signals that carry the most weight with schools, conference
+       organizers and policymakers. Teaching/debate-coaching and AdrianaAsk are real
+       and stay in their own sections below — they just don't need equal top billing. -->
   <div class="credibility">
     <div class="container">
       <ul>
         <li class="badge"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 2.5 3 6 3s6-1.5 6-3v-5.5"/></svg>Education Researcher</li>
         <li class="badge"><svg viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M4 6h6a3 3 0 0 1 3 3"/><path d="M20 6h-6a3 3 0 0 0-3 3"/><path d="M2 7l2 8a3.5 3.5 0 0 0 6 0l2-8"/><path d="M12 7l2 8a3.5 3.5 0 0 0 6 0l2-8"/></svg>Doctoral Researcher in Educational Leadership</li>
         <li class="badge"><svg viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M12 19v3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>AI in Education Practitioner</li>
-        <li class="badge"><svg viewBox="0 0 24 24"><path d="M4 4h12v9H8l-4 4V4z"/><path d="M20 9v9l-3-3h-5"/></svg>Teacher &amp; Debate Coach</li>
-        <li class="badge"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3V9z"/></svg>Creator of AdrianaAsk</li>
       </ul>
     </div>
   </div>
@@ -1279,6 +281,9 @@
               <li>Compares entry conditions, retention systems, workload and policy stability across six countries</li>
               <li>Basis for a peer-reviewed publication in the <em>European Journal of Educational Research</em></li>
             </ul>
+            <!-- Once the DOI/publisher URL is available, replace this span with:
+                 <a class="project-link squiggle" href="REPLACE-WITH-DOI-URL">Read the paper →</a> -->
+            <span class="project-link">Publication details available on request</span>
           </div>
         </div>
         <div class="project-row reveal">
@@ -1549,19 +554,28 @@
       <div class="video-grid">
         <a class="video-card reveal" href="https://www.youtube.com/watch?v=0Ic0Zlb292o">
           <div class="video-thumb">
-            <img src="assets/video-thumb-1.jpg" alt="Thumbnail for the video Qatar at First Glance: I Didn't Expect This">
+            <picture>
+              <source srcset="assets/video-thumb-1.webp" type="image/webp">
+              <img src="assets/video-thumb-1.jpg" alt="Qatar at First Glance: I Didn't Expect This" width="480" height="360" loading="lazy">
+            </picture>
           </div>
           <h3>Qatar at First Glance: I Didn't Expect This</h3>
         </a>
         <a class="video-card reveal" href="https://www.youtube.com/watch?v=F46YbAKqiI4">
           <div class="video-thumb">
-            <img src="assets/video-thumb-2.jpg" alt="Thumbnail for the video Trying Tallinn: Tourist Crowds and Restaurants With No Free Tables">
+            <picture>
+              <source srcset="assets/video-thumb-2.webp" type="image/webp">
+              <img src="assets/video-thumb-2.jpg" alt="Trying Tallinn: Tourist Crowds and Restaurants With No Free Tables" width="480" height="360" loading="lazy">
+            </picture>
           </div>
           <h3>Trying Tallinn: Tourist Crowds and Restaurants With No Free Tables</h3>
         </a>
         <a class="video-card reveal" href="https://www.youtube.com/watch?v=tR8bzc1ZtAs">
           <div class="video-thumb">
-            <img src="assets/video-thumb-3.jpg" alt="Thumbnail for the video New York: Your Perfect Route Through Must-Visit Places">
+            <picture>
+              <source srcset="assets/video-thumb-3.webp" type="image/webp">
+              <img src="assets/video-thumb-3.jpg" alt="New York: Your Perfect Route Through Must-Visit Places" width="480" height="360" loading="lazy">
+            </picture>
           </div>
           <h3>New York: Your Perfect Route Through Must-Visit Places</h3>
         </a>
@@ -1579,10 +593,39 @@
       <p class="reveal">Occasional, no-fluff updates. Unsubscribe anytime.</p>
       <!-- Connect Buttondown/Substack here: replace form action and input name attributes per provider docs -->
       <form class="newsletter-form reveal" action="https://buttondown.email/api/emails/embed-subscribe/REPLACE-WITH-USERNAME" method="post" target="popupwindow">
-        <label for="newsletter-email" class="sr-only" style="position:absolute;left:-9999px;">Email address</label>
+        <label for="newsletter-email" class="sr-only">Email address</label>
         <input type="email" id="newsletter-email" name="email" placeholder="you@email.com" required>
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <!-- Mirrors the FAQPage JSON-LD in <head> — keep both in sync if you edit this -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Common Questions</div>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <h3>What does Adriana Martinkevica do?</h3>
+          <p>Adriana is an education researcher and PhD candidate in Educational Leadership at the University of Latvia, researching teacher shortages and education policy. She also works as a practitioner on AI in education — speaking at conferences, running workshops for schools, and advising education organizations and policymakers.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>How do I book Adriana to speak at a conference or event?</h3>
+          <p>Use the contact form below and select "Speaking" as the inquiry type, or email hello@adrianamartinkevica.com directly with your event details, dates and audience size.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>Does Adriana run workshops for schools?</h3>
+          <p>Yes — half-day and full-day in-person workshops for schools and teacher teams on AI literacy, AI-assisted lesson planning, and CLIL/digital pedagogy training, starting from €600 per session. See <a class="squiggle" href="#work">Work with Adriana</a> for details.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h3>What is the Teacher Attractiveness Index?</h3>
+          <p>A comparative research framework Adriana developed that compares entry conditions, retention systems, workload and policy stability across six countries. It forms the basis of a peer-reviewed publication in the <em>European Journal of Educational Research</em>.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1619,6 +662,13 @@
             <!-- Replace with real Instagram profile URL -->
             <a href="https://www.instagram.com/REPLACE-WITH-INSTAGRAM-HANDLE" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.02-3.58.07-4.85C2.38 3.9 3.9 2.38 7.15 2.23c1.27-.05 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-4.35.2-6.78 2.62-6.98 6.98C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+            </a>
+            <!-- Academic profiles: replace with real ORCID iD and Google Scholar profile URLs -->
+            <a href="https://orcid.org/REPLACE-WITH-ORCID-ID" aria-label="ORCID profile">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zM7.7 5.6c.8 0 1.4.6 1.4 1.4s-.6 1.4-1.4 1.4-1.4-.6-1.4-1.4.6-1.4 1.4-1.4zM6.6 9.9h2.1v8.6H6.6V9.9zm4 0h3.7c3.5 0 5.1 2.5 5.1 4.3 0 2-1.6 4.3-5.1 4.3h-3.7V9.9zm2.1 1.9v4.9h1.5c2.2 0 3-1.2 3-2.4s-.8-2.4-3-2.4h-1.5z"/></svg>
+            </a>
+            <a href="https://scholar.google.com/REPLACE-WITH-SCHOLAR-PROFILE-ID" aria-label="Google Scholar profile">
+              <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.2v6.6L12 21l7-3.2v-6.6L21 9 12 3zm0 2.3L17.8 9 12 12.3 6.2 9 12 5.3zM7 12.5l4.5 2.5v4.3L7 17V12.5zm10 4.5-4.5 2.3v-4.3L17 12.5V17z"/></svg>
             </a>
           </div>
         </div>
