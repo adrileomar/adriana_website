@@ -353,6 +353,20 @@
     color: var(--color-text-soft);
   }
 
+  /* ---------- About ---------- */
+  .about-content{
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .about-content p{
+    color: var(--color-text-soft);
+    font-size: 1.02rem;
+  }
+  .about-content em{
+    font-style: italic;
+    color: var(--color-text);
+  }
+
   /* ---------- Expertise ---------- */
   .expertise-grid{
     display: grid;
@@ -695,6 +709,7 @@
   <nav class="nav">
     <a class="nav-logo" href="#top">Adriana Martinkevica</a>
     <ul class="nav-links">
+      <li><a href="#about">About</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#articles">Articles</a></li>
       <li><a href="#work">Work with Me</a></li>
@@ -704,6 +719,7 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMobilePanel">Menu</button>
   </nav>
   <div class="nav-mobile-panel" id="navMobilePanel">
+    <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#articles">Articles</a>
     <a href="#work">Work with Me</a>
@@ -744,6 +760,22 @@
       </ul>
     </div>
   </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Background</div>
+        <h2>About Adriana</h2>
+      </div>
+      <div class="about-content reveal">
+        <p>Adriana is a PhD candidate in Education Management at the University of Latvia, where her doctoral research examines the relationship between education policy and teacher shortages in Latvia. The work draws on comparative analysis across countries including Finland, Estonia, Portugal and Singapore, grounded in OECD TALIS and PISA evidence and national policy frameworks such as NAP2027 and Latvia's Education Development Guidelines.</p>
+        <p>Her research sits alongside an active teaching practice. Since 2021, she has taught English and communication at Riga Zolitude Grammar School, coaching national and international debate teams and coordinating the school's Erasmus+ partnerships. Before that, she spent several years as an education project coordinator and trainer at the CLIL Learning Center, leading teacher professional development in CLIL methodology and digital pedagogy across Baltic partner schools, and working with ministries and universities on Nordplus-supported initiatives.</p>
+        <p>Her research has been published in the <em>European Journal of Educational Research</em> and presented at international conferences including EDULEARN26 in Palma and an academic conference in Helsinki. She has taken part in OECD TALIS and PISA results conferences and the WISE World Innovation Summit for Education, and has completed dedicated training in AI literacy and responsible classroom use of AI — work that now feeds directly into her focus on how artificial intelligence is reshaping teaching and education policy.</p>
+        <p>It is this combination — active classroom teaching, doctoral research and international policy engagement — that shapes how she approaches AI in education: grounded in evidence, and tested against the realities of an actual classroom.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= EXPERTISE ================= -->
   <section id="expertise">
